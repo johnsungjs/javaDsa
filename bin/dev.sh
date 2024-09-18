@@ -1,4 +1,5 @@
 #!/bin/bash
 
 clear
-java Main.java
+javac Main.java
+java -cp . Main

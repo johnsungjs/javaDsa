@@ -1,42 +1,40 @@
 
-import basic.DynamicArray;
-import java.util.ArrayList;
-
 public class Main {
+
+    private static int binarySearch(int[] data, int target) {
+
+        int low = 0;
+        int high = data.length - 1;
+
+        while (low <= high) {
+            int middle = low + (high - low) / 2;
+            int value = data[middle];
+            System.out.println("Middle: " + middle );
+            if (value < target) {
+                low = middle + 1;
+            } else if (value > target) {
+                high = middle - 1;
+            } else {
+                return middle;
+            }
+        }
+
+        return -1;
+
+    }
 
     public static void main(String[] args) {
 
-        DynamicArray da = new DynamicArray(5);
+        int[] sortedArray = new int[10];
 
-        da.add("A");
-        da.add("B");
-        da.add("C");
-        da.add(0, "X");
-        da.remove(1);
-        // da.remove("B");
-        da.add("1");
-        da.add("2");
-        da.add("3");
-        da.add("4");
-        da.add("5");
-        da.remove(0);
-        da.remove(0);
-        da.remove(0);
-        da.remove(0);
-        da.remove(0);
-        da.remove(0);
+        for (int i = 0; i < sortedArray.length; i++) {
+            sortedArray[i] = i;
+        }
 
+        // int index = Arrays.binarySearch(sortedArray, key);
+        int index = binarySearch(sortedArray, 3);
 
-        System.out.println("SIZE: " + da.size());
-        System.out.println("CAPACITY: " + da.capacity());
-        System.out.println("IS EMPTY: "+ da.isEmpty());
-        System.out.println("DATA: " + da.toStringCapacity());
-
-        System.out.println("WHERE IS C NOW: " + da.indexOf("C"));
-        // System.out.println("TEST RANDOM INDEXOF: " + da.indexOf("akwkawkaw"));
-
-        ArrayList<String> test = new ArrayList<>();
-        // test.add(1, "12");
-        // System.out.println("test: "+ test);
+        System.out.println("TARGET ON INDEX: " + index);
     }
+
 }
