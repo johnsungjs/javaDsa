@@ -8,11 +8,11 @@ public class Main {
 
         while (low <= high) {
             int middle = low + (high - low) / 2;
-            int value = data[middle];
+            int middleValue = data[middle];
             System.out.println("Middle: " + middle );
-            if (value < target) {
+            if (middleValue < target) {
                 low = middle + 1;
-            } else if (value > target) {
+            } else if (middleValue > target) {
                 high = middle - 1;
             } else {
                 return middle;

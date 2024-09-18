@@ -1,7 +1,5 @@
 package basic;
 
-import java.util.ArrayList;
-
 public class DynamicArrayDemo {
    public static void main(String[] args) {
 
@@ -34,7 +32,7 @@ public class DynamicArrayDemo {
         System.out.println("WHERE IS C NOW: " + da.indexOf("C"));
         // System.out.println("TEST RANDOM INDEXOF: " + da.indexOf("akwkawkaw"));
 
-        ArrayList<String> test = new ArrayList<>();
+        // ArrayList<String> test = new ArrayList<>();
         // test.add(1, "12");
         // System.out.println("test: "+ test);
     }
