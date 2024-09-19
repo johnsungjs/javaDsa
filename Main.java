@@ -1,40 +1,17 @@
 
 public class Main {
 
-    private static int binarySearch(int[] data, int target) {
-
-        int low = 0;
-        int high = data.length - 1;
-
-        while (low <= high) {
-            int middle = low + (high - low) / 2;
-            int middleValue = data[middle];
-            System.out.println("Middle: " + middle );
-            if (middleValue < target) {
-                low = middle + 1;
-            } else if (middleValue > target) {
-                high = middle - 1;
-            } else {
-                return middle;
-            }
-        }
-
+    /**
+        This is the improvement from binary search, the middle 
+     */
+    private static int interpolationSearch(int[] data, int target) {
         return -1;
-
     }
 
     public static void main(String[] args) {
-
-        int[] sortedArray = new int[10];
-
-        for (int i = 0; i < sortedArray.length; i++) {
-            sortedArray[i] = i;
-        }
-
-        // int index = Arrays.binarySearch(sortedArray, key);
-        int index = binarySearch(sortedArray, 3);
-
-        System.out.println("TARGET ON INDEX: " + index);
+        int[] data = {1, 2, 3, 4, 5};
+        int index = interpolationSearch(data, 4);
+        System.out.println("Interpolation: " + index);
     }
 
 }

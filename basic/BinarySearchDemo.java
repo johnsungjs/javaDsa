@@ -3,6 +3,11 @@ package basic;
 public class BinarySearchDemo {
   
 
+  /**
+    Effective for large data
+    O(log n)
+    Data has to be sorted
+   */
   private static int binarySearch(int[] data, int target) {
 
     int low = 0;
